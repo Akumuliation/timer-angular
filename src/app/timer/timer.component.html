@@ -9,7 +9,7 @@
   </div>
 
   <div class="timer__controls">
-    <button class="timer__control" (click)="start()" [ngClass]="{disabled: isStart && isEnd }" [disabled]="isStart && isEnd">Start</button>
+    <button class="timer__control" (click)="start()" [ngClass]="{disabled: isStart || isEnd }" [disabled]="isStart || isEnd">Start</button>
     <button class="timer__control" (click)="stop()" [ngClass]="{disabled: !isStart || isEnd }" [disabled]="!isStart || isEnd">Stop</button>
     <button class="timer__control" (click)="wait()" [ngClass]="{disabled: !isStart || isEnd }" [disabled]="!isStart || isEnd">Wait</button>
     <button class="timer__control" (click)="reset()" [ngClass]="{disabled: !isReset }" [disabled]="!isReset">Reset</button>
